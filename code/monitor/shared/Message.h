@@ -3,10 +3,7 @@
 
 namespace Monitor
 {
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	struct Message
+	export struct Message
 	{
 	public:
 		MessageType Type;

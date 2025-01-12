@@ -11,10 +11,7 @@ namespace Soup::Core
 	/// <summary>
 	/// The package lock extensions
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class PackageLockExtensions
+	export class PackageLockExtensions
 	{
 	public:
 		/// <summary>

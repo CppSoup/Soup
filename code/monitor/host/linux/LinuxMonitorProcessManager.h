@@ -11,10 +11,7 @@ namespace Monitor::Linux
 	/// <summary>
 	/// A Linux platform specific process executable using system
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class LinuxMonitorProcessManager : public IMonitorProcessManager
+	export class LinuxMonitorProcessManager : public IMonitorProcessManager
 	{
 	public:
 		/// <summary>

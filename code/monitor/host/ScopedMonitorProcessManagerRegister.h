@@ -10,10 +10,7 @@ namespace Monitor
 	/// <summary>
 	/// A scoped process manager registration helper
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class ScopedMonitorProcessManagerRegister
+	export class ScopedMonitorProcessManagerRegister
 	{
 	public:
 		/// <summary>

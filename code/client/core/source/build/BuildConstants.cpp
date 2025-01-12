@@ -1,18 +1,21 @@
-﻿// <copyright file="BuildConstants.h" company="Soup">
+﻿// <copyright file="BuildConstants.cpp" company="Soup">
 // Copyright (c) Soup. All rights reserved.
 // </copyright>
 
-#pragma once
+module;
+
+export module Soup.Core:BuildConstants;
+
+import Opal;
+
+using namespace Opal;
 
 namespace Soup::Core
 {
 	/// <summary>
 	/// The constants used throughout the build
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class BuildConstants
+	export class BuildConstants
 	{
 	public:
 		static const Path& EvaluateGraphFileName()

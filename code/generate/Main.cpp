@@ -14,8 +14,6 @@
 #include <sstream>
 #include <vector>
 
-#ifdef SOUP_BUILD
-
 // TODO import
 // TODO: Treat wren as C code
 #include "wren/wren.h"
@@ -24,64 +22,6 @@ import Opal;
 import Soup.Core;
 
 using namespace Opal;
-
-#else
-
-// import Opal
-#include <algorithm>
-#include <array>
-#include <atomic>
-#include <chrono>
-#include <functional>
-#include <fstream>
-#include <filesystem>
-#include <iostream>
-#include <locale>
-#include <map>
-#include <optional>
-#include <queue>
-#include <sstream>
-#include <string>
-
-#include <spawn.h>
-#include <sys/wait.h>
-
-#include "Utilities/Path.h"
-#include "Utilities/SemanticVersion.h"
-#include "IO/SystemConsoleManager.h"
-#include "Logger/Log.h"
-#include "Logger/ConsoleTraceListener.h"
-#include "System/LinuxProcessManager.h"
-#include "System/STLFileSystem.h"
-#include "System/STLSystem.h"
-
-using namespace Opal;
-
-// // import CryptoPP
-// #include "Interface.h"
-
-// // import Monitor.Host
-// #include "Linux/LinuxMonitorProcessManager.h"
-
-// import Wren
-// TODO: Treat wren as C code
-#include "wren/wren.h"
-
-// import Soup.Core
-#include <cstring>
-#include <regex>
-#include <variant>
-#include "wren/WrenHost.h"
-#include "wren/WrenValueTable.h"
-#include "build/BuildConstants.h"
-#include "build/FileSystemState.h"
-#include "build/MacroManager.h"
-#include "operation-graph/OperationGraphManager.h"
-#include "recipe/RecipeBuildStateConverter.h"
-#include "recipe/RecipeExtensions.h"
-#include "value-table/ValueTableManager.h"
-
-#endif
 
 #include "GenerateEngine.h"
 

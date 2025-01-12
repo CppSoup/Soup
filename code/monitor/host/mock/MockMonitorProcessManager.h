@@ -11,10 +11,7 @@ namespace Monitor
 	/// The mock monitor process manager
 	/// TODO: Move into test project
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class MockMonitorProcessManager : public IMonitorProcessManager
+	export class MockMonitorProcessManager : public IMonitorProcessManager
 	{
 	private:
 		std::atomic<int> m_uniqueId;

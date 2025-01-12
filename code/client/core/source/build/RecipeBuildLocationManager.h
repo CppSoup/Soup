@@ -4,10 +4,8 @@
 
 #pragma once
 #include "recipe/Recipe.h"
-#include "value-table/ValueTableWriter.h"
 #include "PackageProvider.h"
 #include "RecipeBuildCacheState.h"
-#include "KnownLanguage.h"
 
 namespace Soup::Core
 {
@@ -15,10 +13,7 @@ namespace Soup::Core
 	/// The recipe build location manager that knows how to generate the unique folder for building a 
 	/// Recipe with a given set of parameters
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class RecipeBuildLocationManager
+	export class RecipeBuildLocationManager
 	{
 	private:
 		// Known languages

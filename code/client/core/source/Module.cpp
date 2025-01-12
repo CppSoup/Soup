@@ -1,6 +1,4 @@
-﻿#ifdef SOUP_BUILD
-module;
-#endif
+﻿module;
 
 // TODO: Add a converter level to Opal?
 #define _SILENCE_CXX17_CODECVT_HEADER_DEPRECATION_WARNING
@@ -46,8 +44,6 @@ module;
 
 #endif
 
-#ifdef SOUP_BUILD
-
 // TODO module
 // TODO: Treat wren as C code
 #include "wren/wren.h"
@@ -59,51 +55,35 @@ import CryptoPP;
 import Monitor.Host;
 import Opal;
 
-using namespace Opal;
+// Build
+export import :BuildConstants;
+export import :BuildFailedException;
+export import :DependencyTargetSet;
+export import :FileSystemState;
+export import :KnownLanguage;
+export import :MacroManager;
 
-#else
+// Operation Graph
+export import :CommandInfo;
+export import :OperationInfo;
+export import :OperationResults;
+export import :OperationResultsManager;
+export import :OperationResultsReader;
+export import :OperationResultsWriter;
 
-// import Opal
-#include <algorithm>
-#include <array>
-#include <atomic>
-#include <chrono>
-#include <functional>
-#include <fstream>
-#include <filesystem>
-#include <iostream>
-#include <locale>
-#include <map>
-#include <optional>
-#include <queue>
-#include <sstream>
-#include <string>
+// Utilities
+export import :HandledException;
+export import :SequenceMap;
 
-#include "Utilities/Path.h"
-#include "Utilities/SemanticVersion.h"
-#include "IO/SystemConsoleManager.h"
-#include "Logger/Log.h"
-#include "Logger/ConsoleTraceListener.h"
-#include "System/LinuxProcessManager.h"
-#include "System/STLFileSystem.h"
-#include "System/STLSystem.h"
+// Value Table
+export import :Value;
+export import :ValueTableReader;
+export import :ValueTableWriter;
 
 using namespace Opal;
-
-// import CryptoPP
-#include "Interface.h"
-
-// import Monitor.Host
-#include "Linux/LinuxMonitorProcessManager.h"
-
-// import Wren
-#include "wren/wren.h"
-
-#endif
 
 #define CLIENT_CORE_IMPLEMENTATION
 
-#include "utilities/SequenceMap.h"
 #include "build/RecipeBuildLocationManager.h"
 #include "build/BuildEngine.h"
 #include "local-user-config/LocalUserConfigExtensions.h"

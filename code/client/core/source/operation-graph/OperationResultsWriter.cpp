@@ -1,19 +1,26 @@
-﻿// <copyright file="OperationResultsWriter.h" company="Soup">
+﻿// <copyright file="OperationResultsWriter.cpp" company="Soup">
 // Copyright (c) Soup. All rights reserved.
 // </copyright>
 
-#pragma once
-#include "OperationResult.h"
+module;
+
+#include <chrono>
+#include <set>
+
+export module Soup.Core:OperationResultsWriter;
+
+import Opal;
+import :FileSystemState;
+import :OperationResults;
+
+using namespace Opal;
 
 namespace Soup::Core
 {
 	/// <summary>
 	/// The operation results state writer
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class OperationResultsWriter
+	export class OperationResultsWriter
 	{
 	private:
 		// Binary Operation results file format

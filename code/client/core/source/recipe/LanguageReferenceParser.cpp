@@ -32,9 +32,7 @@
 //                                                                            //
 ////////////////////////////////////////////////////////////////////////////////
 
-#ifdef SOUP_BUILD
 module;
-#endif
 
 // #define SHOW_TOKENS
 
@@ -47,24 +45,9 @@ module;
 #include <string>
 #include <chrono>
 
-#ifdef SOUP_BUILD
-
 module Soup.Core;
 import reflex;
 import Opal;
-
-#else
-
-// import Opal
-#include <optional>
-#include <sstream>
-#include <vector>
-#include "Utilities/SemanticVersion.h"
-using namespace Opal;
-
-#include "LanguageReference.h"
-
-#endif
 
 enum class LanguageReferenceToken : int
 {

@@ -1,21 +1,27 @@
-﻿// <copyright file="ValueTableManager.h" company="Soup">
+﻿// <copyright file="ValueTableManager.cpp" company="Soup">
 // Copyright (c) Soup. All rights reserved.
 // </copyright>
 
-#pragma once
-#include "Value.h"
-#include "ValueTableReader.h"
-#include "ValueTableWriter.h"
+module;
+
+#include <memory>
+#include <stdexcept>
+
+export module Soup.Core:ValueTableReader;
+
+import Opal;
+import :Value;
+import :ValueTableReader;
+import :ValueTableWriter;
+
+using namespace Opal;
 
 namespace Soup::Core
 {
 	/// <summary>
 	/// The Value Table state manager
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class ValueTableManager
+	export class ValueTableManager
 	{
 	public:
 		/// <summary>

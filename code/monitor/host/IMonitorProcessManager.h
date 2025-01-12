@@ -11,10 +11,7 @@ namespace Monitor
 	/// The process manager interface that supports monitoring
 	/// Interface mainly used to allow for unit testing client code
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class IMonitorProcessManager
+	export class IMonitorProcessManager
 	{
 	public:
 		/// <summary>

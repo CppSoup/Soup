@@ -7,10 +7,7 @@
 #include "sml/SML.h"
 #include "WrenHelpers.h"
 
-#ifdef SOUP_BUILD
-export
-#endif
-namespace Soup::Core
+export namespace Soup::Core
 {
 	class WrenHost
 	{

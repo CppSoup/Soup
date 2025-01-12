@@ -11,10 +11,7 @@ namespace Soup::Core
 	/// <summary>
 	/// The recipe extensions
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class RecipeExtensions
+	export class RecipeExtensions
 	{
 	public:
 		/// <summary>

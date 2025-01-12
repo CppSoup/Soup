@@ -3,8 +3,6 @@
 // </copyright>
 
 #pragma once
-#include "LanguageReference.h"
-#include "PackageReference.h"
 #include "RecipeValue.h"
 
 namespace Soup::Core
@@ -12,10 +10,7 @@ namespace Soup::Core
 	/// <summary>
 	/// The recipe container
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class Recipe
+	export class Recipe
 	{
 	private:
 		static constexpr const char* Property_Dependencies = "Dependencies";

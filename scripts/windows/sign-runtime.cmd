@@ -10,7 +10,9 @@ SET SIGN_COMMAND=signtool sign /n "Open Source Developer, Matthew Asplund" /t ht
 SET SignFiles=%RunDir%\*.exe
 SET SignFiles=%RunDir%\Soup\*.dll %SignFiles%
 SET SignFiles=%RunDir%\Soup\*.exe %SignFiles%
+SET SignFiles=%RunDir%\Soup\PackageManager\*.dll %SignFiles%
 SET SignFiles=%RunDir%\Soup\PackageManager\*.exe %SignFiles%
+SET SignFiles=%RunDir%\Soup\View\*.dll %SignFiles%
 SET SignFiles=%RunDir%\Soup\View\*.exe %SignFiles%
 
 %SIGN_COMMAND% %SignFiles%

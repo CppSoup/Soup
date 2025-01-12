@@ -10,10 +10,7 @@ namespace Soup::Core
 	/// <summary>
 	/// The recipe build state converter that converts between a recipe table and a value table
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class RecipeBuildStateConverter
+	export class RecipeBuildStateConverter
 	{
 	public:
 		/// <summary>

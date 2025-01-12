@@ -3,17 +3,13 @@
 // </copyright>
 
 #pragma once
-#include "value-table/Value.h"
 
 namespace Soup::Core
 {
 	/// <summary>
 	/// The set of build arguments for building a recipe
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	struct RecipeBuildArguments
+	export struct RecipeBuildArguments
 	{
 		/// <summary>
 		/// Gets or sets set of host platform name

@@ -1,19 +1,24 @@
-﻿// <copyright file="ValueTableWriter.h" company="Soup">
+﻿// <copyright file="ValueTableWriter.cpp" company="Soup">
 // Copyright (c) Soup. All rights reserved.
 // </copyright>
 
-#pragma once
-#include "Value.h"
+module;
+
+#include <iostream>
+
+export module Soup.Core:ValueTableWriter;
+
+import Opal;
+import :Value;
+
+using namespace Opal;
 
 namespace Soup::Core
 {
 	/// <summary>
 	/// The value table state writer
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class ValueTableWriter
+	export class ValueTableWriter
 	{
 	private:
 		// Binary Value Table file format

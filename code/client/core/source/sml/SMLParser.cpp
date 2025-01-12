@@ -32,10 +32,7 @@
 //                                                                            //
 ////////////////////////////////////////////////////////////////////////////////
 
-
-#ifdef SOUP_BUILD
 module;
-#endif
 
 // #define SHOW_TOKENS
 
@@ -50,18 +47,8 @@ module;
 # include <vector>
 #endif
 
-#ifdef SOUP_BUILD
-
 module Soup.Core;
 import reflex;
-
-#else
-
-#include <variant>
-#include <vector>
-#include "SML.h"
-
-#endif
 
 enum class SMLToken : int
 {

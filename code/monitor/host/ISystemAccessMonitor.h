@@ -2,10 +2,7 @@
 
 namespace Monitor
 {
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class ISystemAccessMonitor
+	export class ISystemAccessMonitor
 	{
 	public:
 		virtual void OnCreateProcess(std::string_view applicationName, bool wasDetoured) = 0;

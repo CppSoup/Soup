@@ -11,10 +11,7 @@ namespace Soup::Core
 	/// <summary>
 	/// The recipe SML serialize manager
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class RecipeSML
+	export class RecipeSML
 	{
 	public:
 		/// <summary>

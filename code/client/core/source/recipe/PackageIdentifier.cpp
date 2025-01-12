@@ -1,19 +1,27 @@
-﻿// <copyright file="PackageIdentifier.h" company="Soup">
+﻿// <copyright file="PackageIdentifier.cpp" company="Soup">
 // Copyright (c) Soup. All rights reserved.
 // </copyright>
 
-#pragma once
-#include "PackageName.h"
+module;
+
+#include <optional>
+#include <regex>
+#include <sstream>
+#include <string>
+
+export module Soup.Core:PackageIdentifier;
+
+import Opal;
+import :PackageName;
+
+using namespace Opal;
 
 namespace Soup::Core
 {
 	/// <summary>
 	/// A package language/owner/name that uniquely identifies a package in a single build graph
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class PackageIdentifier
+	export class PackageIdentifier
 	{
 	private:
 		std::optional<std::string> _language;

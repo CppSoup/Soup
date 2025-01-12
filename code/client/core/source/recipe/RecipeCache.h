@@ -11,10 +11,7 @@ namespace Soup::Core
 	/// <summary>
 	/// The recipe cache that maintains an in memory collection of recipes to prevent loading multiple instances from disk
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class RecipeCache
+	export class RecipeCache
 	{
 	private:
 		std::map<std::string, Recipe> _knownRecipes;

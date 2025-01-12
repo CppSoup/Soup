@@ -1,17 +1,22 @@
-﻿// <copyright file="OperationInfo.h" company="Soup">
+﻿// <copyright file="OperationInfo.cpp" company="Soup">
 // Copyright (c) Soup. All rights reserved.
 // </copyright>
 
-#pragma once
-#include "build/FileSystemState.h"
-#include "CommandInfo.h"
+module;
 
+#include <chrono>
+#include <string>
+
+export module Soup.Core:OperationInfo;
+
+import Opal;
+import :CommandInfo;
+import :FileSystemState;
+
+using namespace Opal;
 using namespace std::chrono_literals;
 
-#ifdef SOUP_BUILD
-export
-#endif
-namespace Soup::Core
+export namespace Soup::Core
 {
 	using OperationId = uint32_t;
 

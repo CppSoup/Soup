@@ -10,10 +10,7 @@ namespace Soup::Core
 	/// <summary>
 	/// The root recipe container
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class RootRecipe
+	export class RootRecipe
 	{
 	private:
 		static constexpr const char* Property_OutputRoot = "OutputRoot";

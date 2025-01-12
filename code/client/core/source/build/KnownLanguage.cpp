@@ -1,15 +1,20 @@
-﻿// <copyright file="KnownLanguage.h" company="Soup">
+﻿// <copyright file="KnownLanguage.cpp" company="Soup">
 // Copyright (c) Soup. All rights reserved.
 // </copyright>
 
-#pragma once
+module;
+
+#include <string>
+
+export module Soup.Core:KnownLanguage;
+
+import Opal;
+
+using namespace Opal;
 
 namespace Soup::Core
 {
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	struct KnownLanguage
+	export struct KnownLanguage
 	{
 		KnownLanguage(
 			std::string extensionOwner,

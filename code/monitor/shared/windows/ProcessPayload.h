@@ -1,9 +1,6 @@
 #pragma once
 
-#ifdef SOUP_BUILD
-export
-#endif
-namespace Monitor::Windows
+export namespace Monitor::Windows
 {
 	constexpr const char* TBLOG_PIPE_NAMEA = "\\\\.\\pipe\\monitor";
 	constexpr const wchar_t* TBLOG_PIPE_NAMEW = L"\\\\.\\pipe\\monitor";

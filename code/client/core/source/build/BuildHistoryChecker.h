@@ -3,14 +3,10 @@
 // </copyright>
 
 #pragma once
-#include "FileSystemState.h"
 
 namespace Soup::Core
 {
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class BuildHistoryChecker
+	export class BuildHistoryChecker
 	{
 	private:
 		FileSystemState& _fileSystemState;

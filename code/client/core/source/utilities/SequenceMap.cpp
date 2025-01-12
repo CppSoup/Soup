@@ -1,8 +1,13 @@
-﻿// <copyright file="SequenceMap.h" company="Soup">
+﻿// <copyright file="SequenceMap.cpp" company="Soup">
 // Copyright (c) Soup. All rights reserved.
 // </copyright>
 
-#pragma once
+module;
+
+#include <stdexcept>
+#include <vector>
+
+export module Soup.Core:SequenceMap;
 
 namespace Soup::Core
 {

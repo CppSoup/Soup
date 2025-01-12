@@ -1,19 +1,26 @@
-﻿// <copyright file="OperationResultsReader.h" company="Soup">
+﻿// <copyright file="OperationResultsReader.cpp" company="Soup">
 // Copyright (c) Soup. All rights reserved.
 // </copyright>
 
-#pragma once
-#include "OperationResult.h"
+module;
+
+#include <array>
+#include <chrono>
+
+export module Soup.Core:OperationResultsReader;
+
+import Opal;
+import :FileSystemState;
+import :OperationResults;
+
+using namespace Opal;
 
 namespace Soup::Core
 {
 	/// <summary>
 	/// The operation results state reader
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class OperationResultsReader
+	export class OperationResultsReader
 	{
 	private:
 		// Binary Operation Results file format

@@ -1,19 +1,26 @@
-﻿// <copyright file="ValueTableReader.h" company="Soup">
+﻿// <copyright file="ValueTableReader.cpp" company="Soup">
 // Copyright (c) Soup. All rights reserved.
 // </copyright>
 
-#pragma once
-#include "Value.h"
+module;
+
+#include <array>
+#include <iostream>
+#include <sstream>
+
+export module Soup.Core:ValueTableReader;
+
+import Opal;
+import :Value;
+
+using namespace Opal;
 
 namespace Soup::Core
 {
 	/// <summary>
 	/// The value table state reader
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class ValueTableReader
+	export class ValueTableReader
 	{
 	private:
 		// Binary Value Table file format

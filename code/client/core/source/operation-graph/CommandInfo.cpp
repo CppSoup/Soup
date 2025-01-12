@@ -1,8 +1,16 @@
-﻿// <copyright file="OperationInfo.h" company="Soup">
+﻿// <copyright file="OperationInfo.cpp" company="Soup">
 // Copyright (c) Soup. All rights reserved.
 // </copyright>
 
-#pragma once
+module;
+
+#include <chrono>
+
+export module Soup.Core:CommandInfo;
+
+import Opal;
+
+using namespace Opal;
 using namespace std::chrono_literals;
 
 namespace Soup::Core
@@ -10,10 +18,7 @@ namespace Soup::Core
 	/// <summary>
 	/// The core command information that describes exactly what to run when evaluating an operation.
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class CommandInfo
+	export class CommandInfo
 	{
 	public:
 		Path WorkingDirectory;

@@ -3,12 +3,8 @@
 // </copyright>
 
 #pragma once
-#include "value-table/Value.h"
 
-#ifdef SOUP_BUILD
-export
-#endif
-namespace Soup::Core
+export namespace Soup::Core
 {
 	class InvalidTypeException : public std::runtime_error
 	{

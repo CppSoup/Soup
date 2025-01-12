@@ -3,17 +3,13 @@
 // </copyright>
 
 #pragma once
-#include "OperationInfo.h"
 
 namespace Soup::Core
 {
 	/// <summary>
 	/// The operation graph that represents the set of operations that need to be evaluated to perform the build
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class OperationGraph
+	export class OperationGraph
 	{
 	private:
 		std::vector<OperationId> _rootOperations;

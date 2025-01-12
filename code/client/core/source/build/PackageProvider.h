@@ -6,13 +6,8 @@
 #include "package-lock/PackageLockExtensions.h"
 #include "RecipeBuildArguments.h"
 #include "recipe/RecipeCache.h"
-#include "utilities/HandledException.h"
-#include "BuildConstants.h"
 
-#ifdef SOUP_BUILD
-export
-#endif
-namespace Soup::Core
+export namespace Soup::Core
 {
 	using PackageId = int;
 	using PackageGraphId = int;

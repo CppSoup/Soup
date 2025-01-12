@@ -1,8 +1,18 @@
-﻿// <copyright file="DependencyTargetSet.h" company="Soup">
+﻿// <copyright file="DependencyTargetSet.cpp" company="Soup">
 // Copyright (c) Soup. All rights reserved.
 // </copyright>
 
-#pragma once
+module;
+
+#include <map>
+#include <set>
+#include <string>
+
+export module Soup.Core:DependencyTargetSet;
+
+import Opal;
+
+using namespace Opal;
 
 namespace Soup::Core
 {

@@ -1,18 +1,24 @@
-﻿// <copyright file="MacroManager.h" company="Soup">
+﻿// <copyright file="MacroManager.cpp" company="Soup">
 // Copyright (c) Soup. All rights reserved.
 // </copyright>
 
-#pragma once
+module;
+
+#include <map>
+#include <string>
+
+export module Soup.Core:MacroManager;
+
+import Opal;
+
+using namespace Opal;
 
 namespace Soup::Core
 {
 	/// <summary>
 	/// The macro manager handles all things macro... It just replaces stuff.
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class MacroManager
+	export class MacroManager
 	{
 	private:
 		const std::map<std::string, std::string>& _macros;

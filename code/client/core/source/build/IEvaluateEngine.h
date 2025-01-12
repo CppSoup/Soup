@@ -4,17 +4,13 @@
 
 #pragma once
 #include "operation-graph/OperationGraph.h"
-#include "operation-graph/OperationResults.h"
 
 namespace Soup::Core
 {
 	/// <summary>
 	/// The core build evaluation interface that knows how to perform a build from a provided Operation Graph.
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class IEvaluateEngine
+	export class IEvaluateEngine
 	{
 	public:
 		/// <summary>

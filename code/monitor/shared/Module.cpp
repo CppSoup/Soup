@@ -1,6 +1,4 @@
-#ifdef SOUP_BUILD
 module;
-#endif
 
 #ifdef _WIN32
 
@@ -34,9 +32,7 @@ module;
 #include <thread>
 #include <vector>
 
-#ifdef SOUP_BUILD
 export module Monitor.Shared;
-#endif
 
 #ifdef _WIN32
 

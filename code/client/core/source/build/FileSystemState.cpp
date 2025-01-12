@@ -1,13 +1,23 @@
-﻿// <copyright file="FileSystemState.h" company="Soup">
+﻿// <copyright file="FileSystemState.cpp" company="Soup">
 // Copyright (c) Soup. All rights reserved.
 // </copyright>
 
-#pragma once
+module;
 
-#ifdef SOUP_BUILD
-export
-#endif
-namespace Soup::Core
+#include <chrono>
+#include <functional>
+#include <optional>
+#include <set>
+#include <string>
+#include <unordered_map>
+
+export module Soup.Core:FileSystemState;
+
+import Opal;
+
+using namespace Opal;
+
+export namespace Soup::Core
 {
 	using FileId = uint32_t;
 
@@ -32,6 +42,18 @@ namespace Soup::Core
 	/// </summary>
 	class FileSystemState
 	{
+	private:
+		// The maximum id that has been used for files
+		// Used to ensure unique ids are generated across the entire system
+		FileId _maxFileId;
+
+		std::unordered_map<FileId, Path> _files;
+		std::unordered_map<std::string, FileId> _fileLookup;
+		
+		std::unordered_map<std::string, DirectoryState, string_hash, std::equal_to<>> _directoryLookup;
+
+		std::unordered_map<FileId, std::optional<std::chrono::time_point<std::chrono::file_clock>>> _writeCache;
+
 	public:
 		/// <summary>
 		/// Initializes a new instance of the <see cref="FileSystemState"/> class.
@@ -375,17 +397,5 @@ namespace Soup::Core
 			auto insertResult = _writeCache.insert_or_assign(fileId, lastWriteTime);
 			return lastWriteTime;
 		}
-
-	private:
-		// The maximum id that has been used for files
-		// Used to ensure unique ids are generated across the entire system
-		FileId _maxFileId;
-
-		std::unordered_map<FileId, Path> _files;
-		std::unordered_map<std::string, FileId> _fileLookup;
-		
-		std::unordered_map<std::string, DirectoryState, string_hash, std::equal_to<>> _directoryLookup;
-
-		std::unordered_map<FileId, std::optional<std::chrono::time_point<std::chrono::file_clock>>> _writeCache;
 	};
 }

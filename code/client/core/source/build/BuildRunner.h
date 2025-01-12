@@ -3,20 +3,12 @@
 // </copyright>
 
 #pragma once
-#include "DependencyTargetSet.h"
-#include "MacroManager.h"
 #include "IEvaluateEngine.h"
-#include "BuildConstants.h"
-#include "BuildFailedException.h"
 #include "PackageProvider.h"
 #include "RecipeBuildArguments.h"
 #include "RecipeBuildLocationManager.h"
-#include "FileSystemState.h"
 #include "local-user-config/LocalUserConfig.h"
 #include "operation-graph/OperationGraphManager.h"
-#include "operation-graph/OperationResultsManager.h"
-#include "utilities/HandledException.h"
-#include "value-table/ValueTableManager.h"
 #include "recipe/RecipeBuildStateConverter.h"
 
 namespace Soup::Core
@@ -25,10 +17,7 @@ namespace Soup::Core
 	/// The build runner that knows how to perform the correct build for a recipe
 	/// and all of its development and runtime dependencies
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class BuildRunner
+	export class BuildRunner
 	{
 	private:
 		// Root arguments

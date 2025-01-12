@@ -1,10 +1,18 @@
-﻿// <copyright file="OperationInfo.h" company="Soup">
+﻿// <copyright file="OperationResult.cpp" company="Soup">
 // Copyright (c) Soup. All rights reserved.
 // </copyright>
 
-#pragma once
-#include "CommandInfo.h"
+module;
 
+#include <chrono>
+#include <vector>
+
+export module Soup.Core:OperationResult;
+
+import Opal;
+import :FileSystemState;
+
+using namespace Opal;
 using namespace std::chrono_literals;
 
 namespace Soup::Core
@@ -12,10 +20,7 @@ namespace Soup::Core
 	/// <summary>
 	/// A node result that tacks the observed output from previous runs
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class OperationResult
+	export class OperationResult
 	{
 	public:
 		bool WasSuccessfulRun;

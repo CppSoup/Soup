@@ -9,10 +9,7 @@ namespace Soup::Core
 	/// <summary>
 	/// The package manager wrapper that sends requests along to the managed implementation
 	/// </summary>
-	#ifdef SOUP_BUILD
-	export
-	#endif
-	class PackageManager
+	export class PackageManager
 	{
 	public:
 		/// <summary>
